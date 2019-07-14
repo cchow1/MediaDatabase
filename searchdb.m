@@ -1,4 +1,5 @@
-function searchdb(handles)
+function out = searchdb(handles)
+%db = 'G:\60_Employees\_trainees\Christy\90_Resources\MATLAB\git\database.xlsx'
 
 genre =  handles.genre;
 db = handles.ed_path.String;

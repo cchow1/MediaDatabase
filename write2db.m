@@ -1,16 +1,29 @@
 function write2db(handles)
-    disp('writing to database...')
-    genre = handles.genre
-    db = handles.ed_path.String
+
+    out = searchdb(handles);
     
-    old = readtable(db, 'Sheet', genre)
-    lastrow = height(old);
+    if out ~= 0
+        disp ('entry already exists. would you like to overwrite?')
+        
+        
+        
+    else
+        
+        disp('writing to database...')
+        genre = handles.genre
+        db = handles.ed_path.String
     
-    yeet = {'ID', 'Title', 'Description', 'Thoughts', 'Score'}
-    newentry = {lastrow+1, handles.ed_title.String, handles.ed_desc.String, handles.ed_thots.String, handles.sl_score.Value};
-    tab = cell2table(newentry, 'VariableNames', yeet);
-    old = [old;tab]
+        old = readtable(db, 'Sheet', genre)
+        lastrow = height(old);
     
-    writetable(old, db, 'Sheet', genre)
-    disp('done!')
+        yeet = {'ID', 'Title', 'Description', 'Thoughts', 'Score'}
+        newentry = {lastrow+1, handles.ed_title.String, handles.ed_desc.String, handles.ed_thots.String, handles.sl_score.Value};
+        tab = cell2table(newentry, 'VariableNames', yeet);
+        old = [old;tab]
+    
+        writetable(old, db, 'Sheet', genre)
+        disp('done!')
+    end
+    
+    
 end
