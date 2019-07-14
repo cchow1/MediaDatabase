@@ -8,6 +8,6 @@ Just follow the instructions on the GUI and enjoy your media repository!
 
 ## For the Future
 Here is a list of changes I would like to make: 
-* Change the Excel database to a real SQL database (MS Access is a differet bit size currently)
+* Change the Excel database to a real SQL database (MS Access is a different bit size currently)
 * Feature to allow updates to existing entries 
 * Change to Python
