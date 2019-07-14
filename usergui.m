@@ -135,7 +135,6 @@ end
 
 
 
-
 %SEARCH BAR
 %TITLE
 function ed_title_CreateFcn(hObject, eventdata, handles)
@@ -240,14 +239,6 @@ end
 
 write2db(handles)
 
-
-
-
-
-
-
-
-
 %EXIT BUTTON
 function b_exit_Callback(hObject, eventdata, handles)
 % hObject    handle to b_exit (see GCBO)
@@ -255,15 +246,12 @@ function b_exit_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 close all;
 
-
-
-
-% --- Executes on button press in b_clear.
+%CLEAR DATA BUTTON
 function b_clear_Callback(hObject, eventdata, handles)
 % hObject    handle to b_clear (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
+cleardata(handles)
 
 
 
